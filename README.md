@@ -1,13 +1,15 @@
+#CodeFest2020
+
+##🐶강아지를 부탁해!🐶
 해당 프로젝트는 [KC-ML2](https://www.kc-ml2.com/)에서 개최한 [CodeFest2020](https://blog.kc-ml2.com/codefest2020/)에 참가하여 진행한 내용입니다.
 
 ## 프로젝트 목표
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ed61c7d-1db2-46df-9da2-90b2fbdffcbc/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ed61c7d-1db2-46df-9da2-90b2fbdffcbc/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/58431910/92466937-cd3b5080-f20b-11ea-8b46-587b4a1a1571.png)
 
 - 1인 가구, 저출산·고령화 현상으로 매년 반려동물을 키우는 가구수가 늘어나면서 관련 시장 규모 또한 상승세에 있다. 그러나 반려견에 대한 기본적인 지식 없이 반려견을 키우는 사람들 역시 증가하고 있다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/83396e67-8053-4db9-bfe3-a6d528cc7e6d/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/83396e67-8053-4db9-bfe3-a6d528cc7e6d/Untitled.png)
-
+![Untitled-2](https://user-images.githubusercontent.com/58431910/92466991-e04e2080-f20b-11ea-8496-6d99d61a7e3d.png)
 - 위의 표에서도 보이듯, 그로 인해 보호자가 반려 동물을 통제하지 못하여 다른 사람을 공격하는 등의 사고가 빈번하게 발생하고, 소통 및 훈육 문제로 인한 반려동물 파양, 유기, 학대 문제가 잦아지고 있다. 그렇기 때문에 반려 동물에 대한 전문적인 훈련이 필수적이지만, 그 금액 또한 만만치 않기 때문에 쉽사리 받을 수 없는  현실이다.
 - 이러한 문제들을 해결하기 위해 우리는 반려견의 행동을 분석하여 현재 감정 상태 또는 이상 행동의 원인 및 해결 방법에 대해 알려주는 서비스를 만들고자 한다.
 
@@ -28,7 +30,7 @@ Background
 
 Try1
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f709e097-85a5-4d54-b3ef-1b6b8475bb4a/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f709e097-85a5-4d54-b3ef-1b6b8475bb4a/Untitled.png)
+![Untitled-3](https://user-images.githubusercontent.com/58431910/92467193-230ff880-f20c-11ea-9480-a69d6372fbdd.png)
 
 - 위 사진의 keyword들을 기준으로 크롤링한 후, 추가적으로 떠오르는 태그들을 즉석해서 추가하였다.
 - 이미지 데이터 및 태그들이 균일하지 못하였고, 그림만 보고 판단하다 보니 정확한 기준이 없어 정확도가 현저히 떨어졌다.
@@ -81,17 +83,17 @@ Try3
 
 ## AZURE Custom Vision 사용
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/512d7eba-4e38-4b59-aea8-3fbdece7aa5d/_2020-09-07__11.55.07.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/512d7eba-4e38-4b59-aea8-3fbdece7aa5d/_2020-09-07__11.55.07.png)
+<img width="775" alt="_2020-09-07__11 55 07" src="https://user-images.githubusercontent.com/58431910/92467252-3ae77c80-f20c-11ea-9505-f39b11256228.png">
 
 - Azure Custom Vision 서비스를 이용하여 위에 정리해둔 키워드들을 tag로 만들어두고 각각의 태그에 해당하는 이미지들을 업로드하여 학습을 진행하였다.
 - 각각의 태그 안의 이미지들을 지우거나 다른 태그로 이동시키고, 필요없는 태그라는 판단이 든 경우 태그도 삭제하며 학습을 진행하였다.
 
 ## Model Test
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9def0a26-59de-45d4-881c-15950519e9e1/_2020-09-08__12.04.23.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9def0a26-59de-45d4-881c-15950519e9e1/_2020-09-08__12.04.23.png)
+<img width="830" alt="_2020-09-08__12 04 23" src="https://user-images.githubusercontent.com/58431910/92467291-4d61b600-f20c-11ea-9688-3078ff421d1a.png">
 
 - 초기, 태그의 개수가 많지 않았을 때(8개)는 다소 높은 정확도를 보여주었다. 하지만 이 경우, 설령 정확도는 높게 나오더라도 다양한 강아지의 행동을 분석하기는 어렵다고 판단하여 태그의 갯수를 늘려보았다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b09c2d66-f821-48b8-a1bd-9ed242b4609f/_2020-09-08__12.06.30.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b09c2d66-f821-48b8-a1bd-9ed242b4609f/_2020-09-08__12.06.30.png)
+<img width="816" alt="_2020-09-08__12 06 30" src="https://user-images.githubusercontent.com/58431910/92467325-5c486880-f20c-11ea-8550-efe0153f6bf4.png">
 
 - 그러나 태그의 수를 늘리면서 학습을 진행하였더니 점점 정확도가 감소하였다. 태그 별 정확도를 분석해 보았을 때, 한 태그에 사진의 갯수가 200개 이하인 항목들이 대체로 정확도가 낮은 경향을 보였고, 혹은 사진의 갯수가 많더라도 태그 별 정확도는 낮은 것도 있었다. 그래서 전자의 경우, 크롤링을 추가적으로 진행하여, 사진의 갯수를 늘렸고, 후자의 경우, 선별 작업을 한 번 더 진행하였다.
