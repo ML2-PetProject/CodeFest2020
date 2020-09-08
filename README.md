@@ -2,7 +2,7 @@
 
 ## 🐶강아지를 부탁해!🐶
 
--해당 프로젝트는 [KC-ML2](https://www.kc-ml2.com/)에서 개최한 [CodeFest2020](https://blog.kc-ml2.com/codefest2020/)에 참가하여 진행한 내용입니다.
+해당 프로젝트는 [KC-ML2](https://www.kc-ml2.com/)에서 개최한 [CodeFest2020](https://blog.kc-ml2.com/codefest2020/)에 참가하여 진행한 내용입니다.
 
 ## 프로젝트 목표
 
@@ -98,3 +98,21 @@ Try3
 <img width="816" alt="_2020-09-08__12 06 30" src="https://user-images.githubusercontent.com/58431910/92467325-5c486880-f20c-11ea-8550-efe0153f6bf4.png">
 
 - 그러나 태그의 수를 늘리면서 학습을 진행하였더니 점점 정확도가 감소하였다. 태그 별 정확도를 분석해 보았을 때, 한 태그에 사진의 갯수가 200개 이하인 항목들이 대체로 정확도가 낮은 경향을 보였고, 혹은 사진의 갯수가 많더라도 태그 별 정확도는 낮은 것도 있었다. 그래서 전자의 경우, 크롤링을 추가적으로 진행하여, 사진의 갯수를 늘렸고, 후자의 경우, 선별 작업을 한 번 더 진행하였다.
+
+## TensorFlow Model 응용
+
+- Azure를 통해 학습된 TensorFlow 모델을 내보내 파이썬언어로 Jupyter Notebook에서 모델을 실행하여 이미지를 입력하면 그에 해당하는 상위 5개의 키워드를 뽑아주는 코드를 작성하였다.
+
+<img width="900" alt="스크린샷 2020-09-08 오후 7 56 03" src="https://user-images.githubusercontent.com/58431910/92467987-661e9b80-f20d-11ea-8030-e3a32d477224.png">
+
+- 모델과 코드들이 위치한 파일에 이미지 파일을 저장하고 위와 같이 이미지 파일명을 입력한 뒤 실행시킨다.
+
+![test](https://user-images.githubusercontent.com/58431910/92468808-b4806a00-f20e-11ea-812b-c6b0e187a5e3.jpg)
+
+- 현재 이용한 이미지파일이다.
+
+<img width="816" alt="스크린샷 2020-09-08 오후 7 55 38" src="https://user-images.githubusercontent.com/58431910/92467975-61f27e00-f20d-11ea-8ec6-617b35120c97.png">
+
+- 실행후 위와같이 상위 5개의 tag가 순서대로 뜨는것을 확인할 수 있다.
+
+
